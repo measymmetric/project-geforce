@@ -3,7 +3,7 @@ import { loadFull } from 'tsparticles';
 import React, { useCallback } from 'react';
 
 const ParticlesContainer = () => {
-  const particlesInit = useCallback(async (engine) => {
+  const particlesInit = useCallback(async engine => {
     await loadFull(engine);
   }, []);
 
@@ -20,7 +20,7 @@ const ParticlesContainer = () => {
         },
         background: {
           color: {
-            value: "",
+            value: '',
           },
         },
         fpsLimit: 120,
@@ -28,11 +28,11 @@ const ParticlesContainer = () => {
           events: {
             onClick: {
               enable: false,
-              mode: "push",
+              mode: 'push',
             },
             onHover: {
               enable: true,
-              mode: "repulse",
+              mode: 'repulse',
             },
           },
           resize: true,
@@ -48,23 +48,23 @@ const ParticlesContainer = () => {
         },
         particles: {
           color: {
-            value: "#e68e2e",
+            value: '#FF6B35',
           },
           links: {
-            color: "#f5d393",
+            color: '#FF6B35',
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.2,
             width: 1,
           },
           collisions: {
             enable: true,
           },
           move: {
-            directions: "none",
+            directions: 'none',
             enable: true,
             outModes: {
-              default: "bounce",
+              default: 'bounce',
             },
             random: false,
             speed: 1,
@@ -81,7 +81,7 @@ const ParticlesContainer = () => {
             value: 0.5,
           },
           shape: {
-            type: "circle",
+            type: 'circle',
           },
           size: {
             value: {

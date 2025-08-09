@@ -35,7 +35,7 @@ const Contact = () => {
               initial="hidden"
               whileInView="show"
               exit="hidden"
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+              className="btn rounded-full border-2 border-accent bg-primary/80 text-dark max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:bg-accent hover:text-white hover:shadow-lg group"
             >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-200">
                 Let&apos;s talk
