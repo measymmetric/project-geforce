@@ -77,16 +77,24 @@ const WorkSlider = () => {
                         width={500}
                         height={300}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-accent/70 to-primary/90 opacity-0 group-hover:opacity-95 transition-all duration-700"></div>
-                      <div className="absolute bottom-0 translate-y-4 group-hover:translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300">
-                        <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                          <div className="delay-100">LIVE</div>
-                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                            PROJECT
+                      <div className="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700"></div>
+                      <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                        <div className="flex items-center justify-between">
+                          <div className="flex flex-col gap-y-2">
+                            <div className="text-white font-semibold text-lg tracking-[0.1em]">
+                              LIVE
+                            </div>
+                            <div className="text-white/80 text-sm uppercase tracking-[0.2em]">
+                              PROJECT
+                            </div>
                           </div>
-                          <div className="text-xl translation-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
+                          <div className="text-3xl text-accent group-hover:scale-110 transition-all duration-300">
                             <RxRocket />
                           </div>
+                        </div>
+                        <div className="mt-3 h-1 bg-accent/30 rounded-full overflow-hidden">
+                          <div className="h-full bg-accent rounded-full w-0 group-hover:w-full transition-all duration-1000 delay-200"></div>
                         </div>
                       </div>
                     </div>

@@ -172,27 +172,27 @@ const About = () => {
             className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
           >
             <div className="flex flex-1 xl:gap-x-6">
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-dark/20 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={10} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-dark">
                   Years of experience
                 </div>
               </div>
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-dark/20 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={250} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-dark">
                   Satisfied clients
                 </div>
               </div>
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-">
+              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-dark/20 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={650} duration={5} /> +
                 </div>
-                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
+                <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[120px] text-dark">
                   Finished projects
                 </div>
               </div>
@@ -218,7 +218,7 @@ const About = () => {
                 <div
                   key={itemIndex}
                   className={`${index === itemIndex && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'}
-              cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+              cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-dark hover:after:w-[100%] hover:after:bg-accent after:absolute after:-bottom-1 after:left-0 text-dark hover:text-accent transition-all duration-300 after:transition-all after:duration-300`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
@@ -237,7 +237,7 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-dark/70"
                 >
                   <div className="font-light mb-2 md:mb-0">{item.title}</div>
                   <div className="hidden md:flex">-</div>
@@ -245,7 +245,10 @@ const About = () => {
                   <div className="flex gap-x-4">
                     {item.icons?.map((icon, itemIndex) => {
                       return (
-                        <div key={itemIndex} className="text-2xl text-white">
+                        <div
+                          key={itemIndex}
+                          className="text-2xl text-dark hover:text-accent transition-all duration-300 cursor-pointer"
+                        >
                           {icon}
                         </div>
                       );
