@@ -1,4 +1,4 @@
-import {Sora} from '@next/font/google';
+import { Sora } from '@next/font/google';
 import Nav from './Nav';
 import Header from './Header';
 import TopLeftImg from './TopLeftImg';
@@ -9,13 +9,17 @@ const sora = Sora({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
 });
 
-const Layout = ({children}) => {
-  return <div className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}>
-    <Nav />
-    <Header />
-    <TopLeftImg />
-    {children}
-  </div>;
+const Layout = ({ children }) => {
+  return (
+    <div
+      className={`page bg-gradient-to-br from-primary via-background to-accent/20 text-dark ${sora.variable} font-sora relative`}
+    >
+      <Nav />
+      <Header />
+      <TopLeftImg />
+      {children}
+    </div>
+  );
 };
 
 export default Layout;
