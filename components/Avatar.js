@@ -1,13 +1,20 @@
 import dynamic from 'next/dynamic';
+import { motion } from 'framer-motion';
+import { fadeIn } from '../variants';
 
-// Dynamically import Spline to prevent SSR issues
 const Spline = dynamic(() => import('@splinetool/react-spline'), {
   ssr: false,
 });
 
 const Avatar = () => {
   return (
-    <div className="hidden xl:flex xl:max-w-none w-full h-full relative">
+    <motion.div
+      variants={fadeIn('down', 0.4)}
+      initial="hidden"
+      whileInView="show"
+      exit="hidden"
+      className="hidden xl:flex xl:max-w-none w-full h-full relative"
+    >
       <div className="spline-container w-full h-full translate-z-0">
         <Spline
           scene="https://prod.spline.design/ypLbfU6GMKsav8vz/scene.splinecode"
@@ -19,7 +26,7 @@ const Avatar = () => {
           renderOnDemand={false}
         />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
