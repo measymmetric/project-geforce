@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 import ParticlesContainer from '../components/ParticlesContainer';
 import ProjectsBtn from '../components/ProjectsBtn';
-import Avatar from '../components/Avatar';
+import SplineModel from '../components/SplineModel';
 
 const Home = () => {
   return (
@@ -55,9 +55,9 @@ const Home = () => {
           initial="hidden"
           whileInView="show"
           exit="hidden"
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[8%]"
+          className="w-full h-full max-w-[800px] max-h-[700px] absolute -bottom-32 lg:bottom-0 lg:right-[5%]"
         >
-          <Avatar />
+          <SplineModel />
         </motion.div>
       </div>
     </div>
