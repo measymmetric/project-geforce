@@ -52,3 +52,27 @@
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
   }
 }
+
+/* Spline 3D Model Transparency */
+canvas[data-engine="three.js r165"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+canvas {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+[data-spline] canvas,
+[data-spline] * {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Ensure Spline container is transparent */
+.spline-container,
+.spline-container * {
+  background: transparent !important;
+  background-color: transparent !important;
+}

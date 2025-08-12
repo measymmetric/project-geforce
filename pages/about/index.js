@@ -23,8 +23,7 @@ import {
 } from 'react-icons/si';
 
 import { RxDesktop, RxMobile } from 'react-icons/rx';
-import Avatar from '../../components/Avatar';
-import Circles from '../../components/Circles';
+import ParticlesContainer from '../../components/ParticlesContainer';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 import { useState } from 'react';
@@ -123,16 +122,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
-      <Circles />
-      <motion.div
-        variants={fadeIn('down', 0.2)}
-        initial="hidden"
-        whileInView="show"
-        exit="hidden"
-        className="hidden xl:flex absolute bottom-0 -left-[370px]"
-      >
-        <Avatar />
-      </motion.div>
+      <ParticlesContainer />
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
         <motion.div
           variants={fadeIn('right', 0.2)}
