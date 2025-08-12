@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-key */
-// icons
 import {
   FaHtml5,
   FaCss3,
@@ -29,7 +27,6 @@ import { fadeIn } from '../../variants';
 import { useState } from 'react';
 import CountUp from 'react-countup';
 
-//  data
 const aboutData = [
   {
     title: 'skills',
@@ -37,34 +34,34 @@ const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <SiTypescript />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <FaNodeJs />,
-          <SiTailwindcss />,
+          <FaHtml5 key={FaHtml5} />,
+          <FaCss3 key={FaCss3} />,
+          <FaJs key={FaJs} />,
+          <SiTypescript key={SiTypescript} />,
+          <FaReact key={FaReact} />,
+          <SiNextdotjs key={SiNextdotjs} />,
+          <FaNodeJs key={FaNodeJs} />,
+          <SiTailwindcss key={SiTailwindcss} />,
         ],
       },
       {
         title: 'UI/UX Design',
         icons: [
-          <FaFigma />,
-          <SiAdobexd />,
-          <SiAdobephotoshop />,
-          <RxDesktop />,
-          <RxMobile />,
+          <FaFigma key={FaFigma} />,
+          <SiAdobexd key={SiAdobexd} />,
+          <SiAdobephotoshop key={SiAdobephotoshop} />,
+          <RxDesktop key={RxDesktop} />,
+          <RxMobile key={RxMobile} />,
         ],
       },
       {
         title: 'Backend & Database',
         icons: [
-          <FaPython />,
-          <FaDatabase />,
-          <SiMongodb />,
-          <SiPostgresql />,
-          <FaGitAlt />,
+          <FaPython key={FaPython} />,
+          <FaDatabase key={FaDatabase} />,
+          <SiMongodb key={SiMongodb} />,
+          <SiPostgresql key={SiPostgresql} />,
+          <FaGitAlt key={FaGitAlt} />,
         ],
       },
     ],
