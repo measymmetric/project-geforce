@@ -13,6 +13,7 @@ const Avatar = () => {
           width: '100%',
           height: '100%',
           background: 'transparent',
+          paddingTop: '40px',
         }}
         className="pointer-events-auto"
       />

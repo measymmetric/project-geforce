@@ -47,7 +47,7 @@ const Home = () => {
           </div>
 
           {/* 3D Avatar - Desktop Only */}
-          <div className="hidden xl:block xl:w-1/2 relative h-[650px] z-20 pointer-events-auto">
+          <div className="hidden xl:block xl:w-1/2 relative h-[750px] z-20 pointer-events-auto">
             <motion.div
               variants={fadeIn('left', 0.4)}
               initial="hidden"
