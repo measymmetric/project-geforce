@@ -1,7 +1,6 @@
 import { Sora } from 'next/font/google';
 import Nav from './Nav';
 import Header from './Header';
-import TopLeftImg from './TopLeftImg';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -16,7 +15,6 @@ const Layout = ({ children }) => {
     >
       <Nav />
       <Header />
-      <TopLeftImg />
       <div className="xl:mr-16">{children}</div>
     </div>
   );

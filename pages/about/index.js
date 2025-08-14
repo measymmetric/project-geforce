@@ -207,8 +207,7 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className={`${index === itemIndex && 'text-accent after:w-[100%] after:bg-accent'}
-              cursor-pointer capitalize text-sm sm:text-base xl:text-lg relative after:w-8 after:h-[2px] after:bg-dark hover:after:w-[100%] hover:after:bg-accent after:absolute after:-bottom-1 after:left-0 text-dark hover:text-accent transition-all duration-300 after:transition-all after:duration-300 mb-2`}
+                  className={`cursor-pointer capitalize text-sm sm:text-base xl:text-lg relative after:w-8 after:h-[2px] after:absolute after:-bottom-1 after:left-0 transition-all duration-300 after:transition-all after:duration-300 mb-2 ${index === itemIndex ? 'text-accent after:w-[100%] after:bg-accent' : 'text-dark after:bg-dark hover:text-accent hover:after:bg-accent'}`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
