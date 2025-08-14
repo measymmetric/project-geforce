@@ -118,9 +118,12 @@ const aboutData = [
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="min-h-screen py-16 sm:py-20 md:py-24 text-center xl:text-left">
-      <ParticlesContainer />
-      <div className="container mx-auto min-h-screen flex flex-col items-center xl:flex-row gap-x-6">
+    <div className="min-h-screen relative py-16 sm:py-20 md:py-24 text-center xl:text-left">
+      {/* Background Particles - Behind everything, only 70% width from right */}
+      <div className="absolute top-0 right-0 h-full w-[70vw] z-0 pointer-events-none flex items-center justify-end">
+        <ParticlesContainer />
+      </div>
+      <div className="container mx-auto min-h-screen flex flex-col items-center xl:flex-row gap-x-6 relative z-10">
         <motion.div
           variants={fadeIn('right', 0.2)}
           initial="hidden"

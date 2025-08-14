@@ -5,9 +5,12 @@ import { fadeIn } from '../../variants';
 
 const Testimonials = () => {
   return (
-    <div className="min-h-screen py-20 sm:py-24 md:py-28 lg:py-32 xl:py-36 flex items-center">
-      <ParticlesContainer />
-      <div className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+    <div className="min-h-screen relative py-20 sm:py-24 md:py-28 lg:py-32 xl:py-36 flex items-center">
+      {/* Background Particles - Behind everything, only 70% width from right */}
+      <div className="absolute top-0 right-0 h-full w-[70vw] z-0 pointer-events-none flex items-center justify-end">
+        <ParticlesContainer />
+      </div>
+      <div className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 relative z-10">
         {/* Mobile Layout - Same as other pages */}
         <div className="flex flex-col xl:flex-row gap-x-8 items-center xl:hidden">
           <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-8 xl:mb-0 px-2 sm:px-4 xl:px-0 mt-12 sm:mt-16 md:mt-20 lg:mt-24">

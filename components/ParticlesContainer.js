@@ -73,9 +73,9 @@ const ParticlesContainer = () => {
           number: {
             density: {
               enable: true,
-              area: 1000,
+              area: 800,
             },
-            value: 50,
+            value: 120,
           },
           opacity: {
             value: 0.3,
@@ -97,14 +97,17 @@ const ParticlesContainer = () => {
             options: {
               particles: {
                 number: {
-                  value: 25,
+                  value: 200,
                 },
                 links: {
                   distance: 80,
-                  opacity: 0.1,
+                  opacity: 0.4,
                 },
                 move: {
                   speed: 0.5,
+                },
+                opacity: {
+                  value: 0.6,
                 },
                 size: {
                   value: {
@@ -127,7 +130,7 @@ const ParticlesContainer = () => {
             options: {
               particles: {
                 number: {
-                  value: 35,
+                  value: 80,
                 },
                 links: {
                   distance: 100,

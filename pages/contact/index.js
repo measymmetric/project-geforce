@@ -12,7 +12,8 @@ const Spline = dynamic(() => import('@splinetool/react-spline'), {
 const Contact = () => {
   return (
     <div className="min-h-screen relative">
-      <div className="absolute inset-0 z-0">
+      {/* Background Particles - Behind everything, only 70% width from right */}
+      <div className="absolute top-0 right-0 h-full w-[70vw] z-0 pointer-events-none flex items-center justify-end">
         <ParticlesContainer />
       </div>
       <div className="container mx-auto py-8 sm:py-16 md:py-20 min-h-screen relative z-10 flex items-center justify-center">
