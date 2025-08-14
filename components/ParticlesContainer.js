@@ -10,7 +10,7 @@ const ParticlesContainer = () => {
   const particlesLoaded = useCallback(async () => {}, []);
   return (
     <Particles
-      className="absolute w-full h-full translate-z-0"
+      className="w-full h-full translate-z-0"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
@@ -39,7 +39,7 @@ const ParticlesContainer = () => {
         },
         modes: {
           push: {
-            quantity: 50,
+            quantity: 100,
           },
           repulse: {
             distance: 100,

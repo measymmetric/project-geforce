@@ -118,7 +118,7 @@ const aboutData = [
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="min-h-screen bg-primary/30 py-16 sm:py-20 md:py-24 text-center xl:text-left">
+    <div className="min-h-screen py-16 sm:py-20 md:py-24 text-center xl:text-left">
       <ParticlesContainer />
       <div className="container mx-auto min-h-screen flex flex-col items-center xl:flex-row gap-x-6">
         <motion.div

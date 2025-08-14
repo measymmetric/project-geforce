@@ -5,7 +5,7 @@ import { fadeIn } from '../../variants';
 
 const Testimonials = () => {
   return (
-    <div className="min-h-screen bg-primary/30 py-20 sm:py-24 md:py-28 lg:py-32 xl:py-36 flex items-center">
+    <div className="min-h-screen py-20 sm:py-24 md:py-28 lg:py-32 xl:py-36 flex items-center">
       <ParticlesContainer />
       <div className="container mx-auto px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20">
         {/* Mobile Layout - Same as other pages */}

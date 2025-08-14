@@ -75,6 +75,19 @@ canvas {
   background-color: transparent !important;
 }
 
+/* Ensure Spline canvas is interactive */
+canvas[data-engine='three.js r165'],
+canvas[data-engine*='three.js'],
+canvas {
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+}
+
+/* Spline component wrapper */
+[data-spline] {
+  pointer-events: auto !important;
+}
+
 @media (max-width: 640px) {
   .swiper-button-next,
   .swiper-button-prev {

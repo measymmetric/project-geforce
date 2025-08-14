@@ -11,7 +11,7 @@ const Spline = dynamic(() => import('@splinetool/react-spline'), {
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-primary/30 relative">
+    <div className="min-h-screen relative">
       <div className="absolute inset-0 z-0">
         <ParticlesContainer />
       </div>

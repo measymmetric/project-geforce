@@ -6,7 +6,7 @@ const Spline = dynamic(() => import('@splinetool/react-spline'), {
 
 const Avatar = () => {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative pointer-events-auto flex items-center justify-center">
       <Spline
         scene="https://prod.spline.design/ypLbfU6GMKsav8vz/scene.splinecode"
         style={{
@@ -14,6 +14,7 @@ const Avatar = () => {
           height: '100%',
           background: 'transparent',
         }}
+        className="pointer-events-auto"
       />
     </div>
   );
