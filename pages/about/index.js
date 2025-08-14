@@ -118,12 +118,12 @@ const aboutData = [
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="min-h-screen relative py-16 sm:py-20 md:py-24 text-center xl:text-left">
+    <div className="relative h-screen flex items-center justify-center text-center xl:text-left">
       {/* Background Particles - Behind everything, only 70% width from right */}
       <div className="absolute top-0 right-0 h-full w-[70vw] z-0 pointer-events-none flex items-center justify-end">
         <ParticlesContainer />
       </div>
-      <div className="container mx-auto min-h-screen flex flex-col items-center xl:flex-row gap-x-6 relative z-10">
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 justify-center relative z-10">
         <motion.div
           variants={fadeIn('right', 0.2)}
           initial="hidden"
@@ -221,7 +221,7 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             exit="hidden"
-            className="py-2 xl:py-4 flex flex-col gap-y-2 items-center xl:items-start max-h-80 overflow-y-auto"
+            className="py-2 xl:py-4 flex flex-col gap-y-2 items-center xl:items-start"
           >
             {aboutData[index].info.map((item, itemIndex) => {
               return (
