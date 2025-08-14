@@ -118,15 +118,15 @@ const aboutData = [
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="min-h-screen bg-primary/30 py-16 sm:py-20 md:py-24 text-center xl:text-left">
       <ParticlesContainer />
-      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+      <div className="container mx-auto min-h-screen flex flex-col items-center xl:flex-row gap-x-6">
         <motion.div
           variants={fadeIn('right', 0.2)}
           initial="hidden"
           whileInView="show"
           exit="hidden"
-          className="flex-1 flex flex-col justify-center"
+          className="flex-1 flex flex-col justify-center px-4 xl:px-0"
         >
           <motion.h2
             variants={fadeIn('up', 0.2)}
@@ -143,7 +143,7 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             exit="hidden"
-            className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
+            className="max-w-lg mx-auto xl:mx-0 mb-6 xl:mb-8"
           >
             I am a passionate designer and developer with over 10 years of
             experience in creating stunning and functional digital experiences.
@@ -156,11 +156,11 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             exit="hidden"
-            className="hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8"
+            className="hidden md:flex mx-auto xl:mx-0 mb-6"
           >
-            <div className="flex flex-1 xl:gap-x-6">
+            <div className="flex flex-1 gap-x-4 xl:gap-x-6">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-dark/20 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                <div className="text-lg sm:text-xl xl:text-3xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={10} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-dark">
@@ -168,15 +168,15 @@ const About = () => {
                 </div>
               </div>
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-dark/20 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+                <div className="text-lg sm:text-xl xl:text-3xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={250} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-dark">
                   Satisfied clients
                 </div>
               </div>
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-dark/20 after:absolute after:top-0 after:right-0">
-                <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
+              <div className="relative flex-1">
+                <div className="text-lg sm:text-xl xl:text-3xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={650} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[120px] text-dark">
@@ -191,21 +191,21 @@ const About = () => {
           initial="hidden"
           whileInView="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+          className="flex flex-col w-full xl:max-w-[48%] px-4 xl:px-0"
         >
           <motion.div
             variants={fadeIn('down', 0.2)}
             initial="hidden"
             whileInView="show"
             exit="hidden"
-            className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4"
+            className="flex gap-x-2 sm:gap-x-4 xl:gap-x-6 mx-auto xl:mx-0 mb-4 flex-wrap justify-center xl:justify-start"
           >
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
-                  className={`${index === itemIndex && 'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'}
-              cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-dark hover:after:w-[100%] hover:after:bg-accent after:absolute after:-bottom-1 after:left-0 text-dark hover:text-accent transition-all duration-300 after:transition-all after:duration-300`}
+                  className={`${index === itemIndex && 'text-accent after:w-[100%] after:bg-accent'}
+              cursor-pointer capitalize text-sm sm:text-base xl:text-lg relative after:w-8 after:h-[2px] after:bg-dark hover:after:w-[100%] hover:after:bg-accent after:absolute after:-bottom-1 after:left-0 text-dark hover:text-accent transition-all duration-300 after:transition-all after:duration-300 mb-2`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
@@ -218,23 +218,25 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             exit="hidden"
-            className="py-2 xl:py-6 flex flex-col gap-y-2 items-center xl:items-start"
+            className="py-2 xl:py-4 flex flex-col gap-y-2 items-center xl:items-start max-h-80 overflow-y-auto"
           >
             {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-dark/70"
+                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-dark/70 text-sm sm:text-base"
                 >
-                  <div className="font-light mb-2 md:mb-0">{item.title}</div>
+                  <div className="font-light mb-2 md:mb-0 text-center md:text-left">
+                    {item.title}
+                  </div>
                   <div className="hidden md:flex">-</div>
-                  <div className="">{item.stage}</div>
-                  <div className="flex gap-x-4">
+                  <div className="mb-2 md:mb-0">{item.stage}</div>
+                  <div className="flex gap-x-2 sm:gap-x-4 justify-center flex-wrap">
                     {item.icons?.map((icon, itemIndex) => {
                       return (
                         <div
                           key={itemIndex}
-                          className="text-2xl text-dark hover:text-accent transition-all duration-300 cursor-pointer"
+                          className="text-lg sm:text-xl text-dark hover:text-accent transition-all duration-300 cursor-pointer"
                         >
                           {icon}
                         </div>

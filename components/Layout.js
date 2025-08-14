@@ -12,12 +12,12 @@ const sora = Sora({
 const Layout = ({ children }) => {
   return (
     <div
-      className={`page bg-gradient-to-br from-primary via-background to-accent/20 text-dark ${sora.variable} font-sora relative`}
+      className={`page bg-gradient-to-br from-primary via-background to-accent/20 text-dark ${sora.variable} font-sora relative pb-16 xl:pb-0`}
     >
       <Nav />
       <Header />
       <TopLeftImg />
-      {children}
+      <div className="xl:mr-16">{children}</div>
     </div>
   );
 };

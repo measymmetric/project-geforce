@@ -23,7 +23,7 @@ const ParticlesContainer = () => {
             value: '',
           },
         },
-        fpsLimit: 120,
+        fpsLimit: 60,
         interactivity: {
           events: {
             onClick: {
@@ -39,10 +39,10 @@ const ParticlesContainer = () => {
         },
         modes: {
           push: {
-            quantity: 100,
+            quantity: 50,
           },
           repulse: {
-            distance: 200,
+            distance: 100,
             duration: 0.4,
           },
         },
@@ -52,9 +52,9 @@ const ParticlesContainer = () => {
           },
           links: {
             color: '#FF6B35',
-            distance: 150,
+            distance: 120,
             enable: true,
-            opacity: 0.2,
+            opacity: 0.15,
             width: 1,
           },
           collisions: {
@@ -67,18 +67,18 @@ const ParticlesContainer = () => {
               default: 'bounce',
             },
             random: false,
-            speed: 1,
+            speed: 0.8,
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 1000,
             },
-            value: 80,
+            value: 50,
           },
           opacity: {
-            value: 0.5,
+            value: 0.3,
           },
           shape: {
             type: 'circle',
@@ -86,11 +86,56 @@ const ParticlesContainer = () => {
           size: {
             value: {
               min: 1,
-              max: 5,
+              max: 3,
             },
           },
           detectRetina: true,
         },
+        responsive: [
+          {
+            maxWidth: 768,
+            options: {
+              particles: {
+                number: {
+                  value: 25,
+                },
+                links: {
+                  distance: 80,
+                  opacity: 0.1,
+                },
+                move: {
+                  speed: 0.5,
+                },
+                size: {
+                  value: {
+                    min: 1,
+                    max: 2,
+                  },
+                },
+              },
+              interactivity: {
+                events: {
+                  onHover: {
+                    enable: false,
+                  },
+                },
+              },
+            },
+          },
+          {
+            maxWidth: 1024,
+            options: {
+              particles: {
+                number: {
+                  value: 35,
+                },
+                links: {
+                  distance: 100,
+                },
+              },
+            },
+          },
+        ],
       }}
     />
   );

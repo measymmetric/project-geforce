@@ -53,6 +53,10 @@ const ServiceSlider = () => {
           spaceBetween: 15,
         },
         640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
           slidesPerView: 3,
           spaceBetween: 30,
         },
@@ -62,20 +66,24 @@ const ServiceSlider = () => {
         clickable: true,
       }}
       modules={[FreeMode, Pagination]}
-      className="h-[240px] sm:h-[340px]"
+      className="h-[280px] xs:h-[320px] sm:h-[340px] md:h-[360px]"
     >
       {serviceData.map((item, index) => {
         return (
           <SwiperSlide key={index}>
-            <motion.div className="bg-primary/70 h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6 sm:gap-x-0 group cursor-pointer hover:bg-accent/10 hover:border hover:border-accent/50 hover:shadow-lg transition-all duration-300 backdrop-blur-sm">
-              <div className="text-4xl text-accent mb-4">{item.icon}</div>
-              <div className="mb-8">
-                <div className="mb-2 text-lg">{item.title}</div>
-                <p className="max-w-[350px] leading-normal">
+            <motion.div className="bg-primary/70 h-full rounded-lg p-4 sm:p-6 flex flex-col gap-y-4 group cursor-pointer hover:bg-accent/10 hover:border hover:border-accent/50 hover:shadow-lg transition-all duration-300 backdrop-blur-sm">
+              <div className="text-3xl sm:text-4xl text-accent">
+                {item.icon}
+              </div>
+              <div className="flex-1">
+                <div className="mb-2 text-base sm:text-lg font-semibold">
+                  {item.title}
+                </div>
+                <p className="text-sm sm:text-base leading-normal text-dark/70">
                   {item.description}
                 </p>
               </div>
-              <div className="text-3xl">
+              <div className="text-2xl sm:text-3xl">
                 <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
               </div>
             </motion.div>

@@ -6,58 +6,64 @@ import Avatar from '../components/Avatar';
 
 const Home = () => {
   return (
-    <div className="bg-gradient-to-r from-primary/80 via-background/60 to-accent/10 h-full">
-      <div className="w-full h-full bg-gradient-to-b from-transparent via-accent/5 to-transparent">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
-          <motion.h1
-            variants={fadeIn('down', 0.4)}
-            initial="hidden"
-            whileInView="show"
-            exit="hidden"
-            className="h1"
-          >
-            Transforming Ideas <br />
-            Into {''}
-            <span className="text-accent">Digital Reality</span>
-          </motion.h1>
-          <motion.p
-            variants={fadeIn('down', 0.3)}
-            initial="hidden"
-            whileInView="show"
-            exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
-          >
-            I am a passionate web developer with a knack for creating stunning
-            and functional websites. My journey in web development has been
-            fueled by a love for coding and a desire to bring ideas to life
-            through technology.
-          </motion.p>
-          <div className="flex justify-center xl:hidden relative">
-            <ProjectsBtn />
+    <div className="bg-gradient-to-r from-primary/80 via-background/60 to-accent/10 min-h-screen relative">
+      {/* Main Content */}
+      <div className="container mx-auto min-h-screen flex flex-col justify-center pt-16 sm:pt-20 md:pt-24 xl:pt-0">
+        <div className="text-center xl:text-left xl:flex xl:items-center xl:justify-between">
+          {/* Text Content */}
+          <div className="xl:w-1/2 z-10 relative">
+            <motion.h1
+              variants={fadeIn('down', 0.4)}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              className="h1 mb-4 sm:mb-6"
+            >
+              Transforming Ideas <br />
+              Into {''}
+              <span className="text-accent">Digital Reality</span>
+            </motion.h1>
+            <motion.p
+              variants={fadeIn('down', 0.3)}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              className="max-w-md mx-auto xl:mx-0 mb-6 sm:mb-8 xl:mb-12 px-4 xl:px-0"
+            >
+              I am a passionate web developer with a knack for creating stunning
+              and functional websites. My journey in web development has been
+              fueled by a love for coding and a desire to bring ideas to life
+              through technology.
+            </motion.p>
+            <motion.div
+              variants={fadeIn('down', 0.4)}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              className="flex justify-center xl:justify-start"
+            >
+              <ProjectsBtn />
+            </motion.div>
           </div>
-          <motion.div
-            variants={fadeIn('down', 0.4)}
-            initial="hidden"
-            whileInView="show"
-            exit="hidden"
-            className="hidden xl:flex"
-          >
-            <ProjectsBtn />
-          </motion.div>
+
+          {/* 3D Avatar - Desktop Only */}
+          <div className="hidden xl:block xl:w-1/2 relative h-[600px]">
+            <motion.div
+              variants={fadeIn('left', 0.4)}
+              initial="hidden"
+              whileInView="show"
+              exit="hidden"
+              className="absolute inset-0"
+            >
+              <Avatar />
+            </motion.div>
+          </div>
         </div>
       </div>
-      <div className="w-[1200px] h-full absolute right-0 bottom-0">
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
+
+      {/* Background Particles */}
+      <div className="absolute inset-0 z-0">
         <ParticlesContainer />
-        <motion.div
-          variants={fadeIn('down', 0.4)}
-          initial="hidden"
-          whileInView="show"
-          exit="hidden"
-          className="w-full h-full max-w-[800px] max-h-[700px] absolute -bottom-32 lg:bottom-0 lg:right-[5%]"
-        >
-          <Avatar />
-        </motion.div>
       </div>
     </div>
   );
