@@ -48,7 +48,7 @@ const Contact = () => {
               className="textarea w-full"
             ></textarea>
             <motion.button
-              variants={fadeIn('up', 0.6)}
+              variants={fadeIn('up', 0.1)}
               initial="hidden"
               whileInView="show"
               exit="hidden"
