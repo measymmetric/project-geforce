@@ -8,7 +8,7 @@ const Avatar = () => {
   return (
     <div className="w-full h-full relative pointer-events-auto flex items-center justify-center">
       <Spline
-        scene="https://prod.spline.design/ypLbfU6GMKsav8vz/scene.splinecode"
+        scene="/scene.splinecode"
         style={{
           width: '100%',
           height: '100%',
