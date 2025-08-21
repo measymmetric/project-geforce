@@ -124,7 +124,6 @@ const About = () => {
         <ParticlesContainer />
       </div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 justify-center relative z-10">
-        {/* Desktop/Tablet Heading & Paragraph */}
         <motion.div
           variants={fadeIn('right', 0.2)}
           initial="hidden"
@@ -137,7 +136,7 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             exit="hidden"
-            className="h2 hidden md:block"
+            className="h2"
           >
             Captivating <span className="text-accent">stories</span> birth
             magnificent designs
@@ -147,7 +146,7 @@ const About = () => {
             initial="hidden"
             whileInView="show"
             exit="hidden"
-            className="max-w-lg mx-auto xl:mx-0 mb-6 xl:mb-8 hidden md:block"
+            className="max-w-lg mx-auto xl:mx-0 mb-6 xl:mb-8"
           >
             I am a passionate designer and developer with over 10 years of
             experience in creating stunning and functional digital experiences.
@@ -190,15 +189,6 @@ const About = () => {
             </div>
           </motion.div>
         </motion.div>
-        {/* Mobile Heading & Paragraph - below header, above socials */}
-        <div className="block md:hidden w-full px-4 mb-4">
-          <h2 className="h2">
-            Captivating <span className="text-accent">stories</span> birth magnificent designs
-          </h2>
-          <p className="max-w-lg mx-auto mb-6">
-            I am a passionate designer and developer with over 10 years of experience in creating stunning and functional digital experiences. My journey has been fueled by a love for storytelling through design, where every pixel serves a purpose and every interaction tells a story.
-          </p>
-        </div>
         <motion.div
           variants={fadeIn('left', 0.4)}
           initial="hidden"
