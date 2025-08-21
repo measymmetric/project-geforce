@@ -17,8 +17,9 @@ const Home = () => {
               exit="hidden"
               className="h1 mb-4 sm:mb-6"
             >
-              Hi! I&apos;m {''}
-              <span className="text-accent">Ankur Singh</span>
+              Shaping the Future <br />
+              With {''}
+              <span className="text-accent">Innovation</span>
             </motion.h1>
             <motion.p
               variants={fadeIn('down', 0.3)}
@@ -27,11 +28,11 @@ const Home = () => {
               exit="hidden"
               className="max-w-md mx-auto xl:mx-0 mb-6 sm:mb-8 xl:mb-12 px-4 xl:px-0"
             >
-              Full-Stack Developer with 4+ years of experience building scalable
-              web and VR applications for global clients like WHO, Emirates NBD,
-              and ADNOC. Skilled in React.js, Next.js, Unity, Typescript and
-              modern JavaScript, delivering high-quality solutions under tight
-              deadlines.
+              I design and develop modern web and VR experiences that engage
+              users and elevate brands. Skilled in React, Next.js, and immersive
+              tech, I deliver seamless, user-focused platforms— blending
+              creativity and technical excellence to turn ideas into impactful
+              digital solutions.
             </motion.p>
             <motion.div
               variants={fadeIn('down', 0.4)}
