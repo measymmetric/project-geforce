@@ -138,8 +138,9 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs
+            Driven by Code,
+            <br />
+            <span className="text-accent">Inspired by Impact</span>
           </motion.h2>
           <motion.p
             variants={fadeIn('up', 0.3)}
@@ -148,11 +149,12 @@ const About = () => {
             exit="hidden"
             className="max-w-lg mx-auto xl:mx-0 mb-6 xl:mb-8"
           >
-            I am a passionate designer and developer with over 10 years of
-            experience in creating stunning and functional digital experiences.
-            My journey has been fueled by a love for storytelling through
-            design, where every pixel serves a purpose and every interaction
-            tells a story.
+            I’m a Full-Stack Developer with 3+ years of experience creating
+            scalable web and VR solutions for global organizations. My passion
+            lies in blending technology and creativity to solve real-world
+            problems. With expertise in React.js, Next.js, and Unity, I focus on
+            building platforms that are robust, user-centric, and make a
+            meaningful difference.
           </motion.p>
           <motion.div
             variants={fadeIn('up', 0.4)}
@@ -164,23 +166,23 @@ const About = () => {
             <div className="flex flex-1 gap-x-4 xl:gap-x-6">
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-dark/20 after:absolute after:top-0 after:right-0">
                 <div className="text-lg sm:text-xl xl:text-3xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={4} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-dark">
                   Years of experience
                 </div>
               </div>
-              <div className="relative flex-1 after:w-[1px] after:h-full after:bg-dark/20 after:absolute after:top-0 after:right-0">
+              {/* <div className="relative flex-1 after:w-[1px] after:h-full after:bg-dark/20 after:absolute after:top-0 after:right-0">
                 <div className="text-lg sm:text-xl xl:text-3xl font-extrabold text-accent mb-2">
                   <CountUp start={0} end={250} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] text-dark">
                   Satisfied clients
                 </div>
-              </div>
+              </div> */}
               <div className="relative flex-1">
                 <div className="text-lg sm:text-xl xl:text-3xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} /> +
+                  <CountUp start={0} end={15} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[120px] text-dark">
                   Finished projects
