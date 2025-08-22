@@ -199,16 +199,18 @@ export const aboutData = [
     ],
   },
   {
-    title: 'credentials',
+    title: 'Education',
     info: [
-      { title: 'Web Development - ABC University, LA, CA', stage: '2011' },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
+        title: 'Masters of Computer Application (MCA)',
+        stage: 'Maharshi Dayanand University, Rohtak (Haryana)',
+        year: '2020 - 2022',
       },
       {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
+        title: 'Bachelors of Computer Application (BCA)',
+        stage:
+          'Makhanlal Chaturvedi National University of Journalism and Communication, Bhopal (Madhya Pradesh)',
+        year: '2017 - 2020',
       },
     ],
   },

@@ -10,10 +10,14 @@ const About = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center text-center xl:text-left">
+      {/* Particles Background */}
       <div className="absolute top-0 right-0 h-full w-[70vw] z-0 pointer-events-none flex items-center justify-end">
         <ParticlesContainer />
       </div>
+
+      {/* Content */}
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 justify-center relative z-10 pt-32 pb-28 md:pt-32 md:pb-16">
+        {/* LEFT SIDE */}
         <motion.div
           variants={fadeIn('right', 0.2)}
           initial="hidden"
@@ -48,6 +52,7 @@ const About = () => {
             meaningful difference.
           </motion.p>
 
+          {/* Stats */}
           <motion.div
             variants={fadeIn('up', 0.4)}
             initial="hidden"
@@ -75,6 +80,8 @@ const About = () => {
             </div>
           </motion.div>
         </motion.div>
+
+        {/* RIGHT SIDE */}
         <motion.div
           variants={fadeIn('left', 0.4)}
           initial="hidden"
@@ -82,6 +89,7 @@ const About = () => {
           exit="hidden"
           className="flex flex-col w-full xl:max-w-[48%] px-4 xl:px-0"
         >
+          {/* Tabs */}
           <motion.div
             variants={fadeIn('down', 0.2)}
             initial="hidden"
@@ -103,6 +111,8 @@ const About = () => {
               </div>
             ))}
           </motion.div>
+
+          {/* Content */}
           <motion.div
             variants={fadeIn('up', 0.3)}
             initial="hidden"
@@ -115,13 +125,20 @@ const About = () => {
               const hasStage = !!item.stage;
               const hasIcons = Array.isArray(item.icons);
               const hasSkills = Array.isArray(item.skills);
+
               const isAchievements =
                 aboutData[index].title?.toLowerCase() === 'achievements';
+              const isEducation =
+                aboutData[index].title?.toLowerCase() === 'education';
+
               return (
                 <div
                   key={itemIndex}
-                  className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-dark/100 text-sm sm:text-base"
+                  className={`flex-1 flex flex-col md:flex-row ${
+                    isEducation ? 'w-full' : 'max-w-max'
+                  } gap-x-2 items-center text-dark/100 text-sm sm:text-base`}
                 >
+                  {/* EXPERIENCE */}
                   {aboutData[index].title?.toLowerCase() === 'experience' ? (
                     <div className="mb-2">
                       <div className="font-semibold text-dark text-sm sm:text-base">
@@ -140,7 +157,27 @@ const About = () => {
                           </ul>
                         )}
                     </div>
+                  ) : isEducation ? (
+                    /* EDUCATION: degree left, year right, university below */
+                    <div className="mb-2 w-full">
+                      <div className="flex items-baseline gap-4">
+                        <span className="font-semibold text-dark text-sm sm:text-base text-left">
+                          {item.title}
+                        </span>
+                        {item.year && (
+                          <span className="ml-auto text-dark/60 text-xs sm:text-sm text-right min-w-[90px]">
+                            {item.year}
+                          </span>
+                        )}
+                      </div>
+                      {item.stage && (
+                        <div className="text-dark/80 text-xs sm:text-sm mt-1 text-left">
+                          {item.stage}
+                        </div>
+                      )}
+                    </div>
                   ) : (
+                    /* OTHER TABS (Skills, Achievements) */
                     <div className="font-light mb-2 md:mb-0 text-start md:text-left flex items-start">
                       {isAchievements && item.icon && (
                         <span
@@ -153,10 +190,18 @@ const About = () => {
                       <span>{label}</span>
                     </div>
                   )}
+
+                  {/* Divider */}
                   {(hasStage || hasIcons || hasSkills) && (
                     <div className="hidden md:flex">-</div>
                   )}
-                  {hasStage && <div className="mb-2 md:mb-0">{item.stage}</div>}
+
+                  {/* Stage (awards etc.) */}
+                  {hasStage && !isEducation && (
+                    <div className="mb-2 md:mb-0">{item.stage}</div>
+                  )}
+
+                  {/* Icons (awards/skills if old format) */}
                   {hasIcons && (
                     <div className="flex gap-x-2 sm:gap-x-4 justify-center flex-wrap">
                       {item.icons.map((icon, idx) => (
@@ -169,6 +214,8 @@ const About = () => {
                       ))}
                     </div>
                   )}
+
+                  {/* SKILLS (frontend/backend/game dev/tools) */}
                   {hasSkills && (
                     <div className="flex gap-x-2 sm:gap-x-4 justify-center flex-wrap">
                       {item.skills.map((skill, idx) => (
