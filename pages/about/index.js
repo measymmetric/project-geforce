@@ -1,4 +1,3 @@
-// pages/about/index.js
 import aboutData from '../../controller/aboutdata.jsx';
 import ParticlesContainer from '../../components/ParticlesContainer';
 import { motion } from 'framer-motion';
@@ -11,14 +10,10 @@ const About = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center text-center xl:text-left">
-      {/* Background Particles - Behind everything, only 70% width from right */}
       <div className="absolute top-0 right-0 h-full w-[70vw] z-0 pointer-events-none flex items-center justify-end">
         <ParticlesContainer />
       </div>
-
-      {/* Increased base (mobile) padding only; md+ remains same */}
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6 justify-center relative z-10 pt-32 pb-28 md:pt-32 md:pb-16">
-        {/* Left column */}
         <motion.div
           variants={fadeIn('right', 0.2)}
           initial="hidden"
@@ -80,8 +75,6 @@ const About = () => {
             </div>
           </motion.div>
         </motion.div>
-
-        {/* Right column */}
         <motion.div
           variants={fadeIn('left', 0.4)}
           initial="hidden"
@@ -89,7 +82,6 @@ const About = () => {
           exit="hidden"
           className="flex flex-col w-full xl:max-w-[48%] px-4 xl:px-0"
         >
-          {/* Tabs */}
           <motion.div
             variants={fadeIn('down', 0.2)}
             initial="hidden"
@@ -111,8 +103,6 @@ const About = () => {
               </div>
             ))}
           </motion.div>
-
-          {/* Panel */}
           <motion.div
             variants={fadeIn('up', 0.3)}
             initial="hidden"
@@ -131,20 +121,13 @@ const About = () => {
                   key={itemIndex}
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-dark/100 text-sm sm:text-base"
                 >
-                  {/* Always show label */}
                   <div className="font-light mb-2 md:mb-0 text-center md:text-left">
                     {label}
                   </div>
-
-                  {/* Show "-" after label if stage or skills/icons exist */}
                   {(hasStage || hasIcons || hasSkills) && (
                     <div className="hidden md:flex">-</div>
                   )}
-
-                  {/* Stage text (awards/experience/credentials) */}
                   {hasStage && <div className="mb-2 md:mb-0">{item.stage}</div>}
-
-                  {/* Icon nodes (if provided directly) */}
                   {hasIcons && (
                     <div className="flex gap-x-2 sm:gap-x-4 justify-center flex-wrap">
                       {item.icons.map((icon, idx) => (
@@ -157,8 +140,6 @@ const About = () => {
                       ))}
                     </div>
                   )}
-
-                  {/* Skills with black → colored hover */}
                   {hasSkills && (
                     <div className="flex gap-x-2 sm:gap-x-4 justify-center flex-wrap">
                       {item.skills.map((skill, idx) => (
@@ -166,20 +147,18 @@ const About = () => {
                           key={idx}
                           className="relative w-6 h-6 group cursor-pointer"
                         >
-                          {/* Black version (default) */}
                           <img
                             src={skill.icon}
                             alt={skill.name}
                             className="w-6 h-6 object-contain grayscale group-hover:opacity-0 transition-opacity duration-300"
                           />
-                          {/* Color version (hover) */}
                           <img
                             src={skill.icon}
                             alt={skill.name}
                             className="w-6 h-6 object-contain absolute top-0 left-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                           />
                           <span
-                            className=" absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-2.5 py-1 rounded-md bg-accent text-white text-xsshadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap
+                            className=" absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-2.5 py-1 rounded-md bg-accent text-white text-xs shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap
                               after:content-[''] after:absolute after:top-full after:left-1/2 after:-translate-x-1/2 after:border-4 after:border-transparent after:border-t-accent"
                           >
                             {skill.name}
