@@ -115,14 +115,23 @@ const About = () => {
               const hasStage = !!item.stage;
               const hasIcons = Array.isArray(item.icons);
               const hasSkills = Array.isArray(item.skills);
-
+              const isAchievements =
+                aboutData[index].title?.toLowerCase() === 'achievements';
               return (
                 <div
                   key={itemIndex}
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-dark/100 text-sm sm:text-base"
                 >
-                  <div className="font-light mb-2 md:mb-0 text-center md:text-left">
-                    {label}
+                  <div className="font-light mb-2 md:mb-0 text-start md:text-left flex items-start">
+                    {isAchievements && item.icon && (
+                      <span
+                        className="mr-2 text-dark text-base"
+                        style={{ marginTop: '0.25em' }}
+                      >
+                        {item.icon}
+                      </span>
+                    )}
+                    <span>{label}</span>
                   </div>
                   {(hasStage || hasIcons || hasSkills) && (
                     <div className="hidden md:flex">-</div>

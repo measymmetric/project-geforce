@@ -1,28 +1,6 @@
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaPython,
-  FaNodeJs,
-  FaDatabase,
-  FaGitAlt,
-} from 'react-icons/fa';
+import { FaCheckCircle } from 'react-icons/fa';
 
-import {
-  SiNextdotjs,
-  SiAdobexd,
-  SiAdobephotoshop,
-  SiTypescript,
-  SiTailwindcss,
-  SiMongodb,
-  SiPostgresql,
-} from 'react-icons/si';
-
-import { RxDesktop, RxMobile } from 'react-icons/rx';
-
-const aboutData = [
+export const aboutData = [
   {
     title: 'skills',
     info: [
@@ -165,12 +143,26 @@ const aboutData = [
     ],
   },
   {
-    title: 'awards',
+    title: 'Achievements',
     info: [
-      { title: 'Webby Awards - Honoree', stage: '2011 - 2012' },
       {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
+        icon: <FaCheckCircle />,
+        title: 'Delivered VR training platform for World Health Organization',
+      },
+      {
+        icon: <FaCheckCircle />,
+        title:
+          'Built exclusive web platform serving Emirates National Bank of Dubai',
+      },
+      {
+        icon: <FaCheckCircle />,
+        title:
+          'Developed emergency response simulation systems for multiple organizations',
+      },
+      {
+        icon: <FaCheckCircle />,
+        title:
+          'Created modern Learning Management System serving educational institutions',
       },
     ],
   },
