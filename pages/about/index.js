@@ -122,17 +122,37 @@ const About = () => {
                   key={itemIndex}
                   className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-dark/100 text-sm sm:text-base"
                 >
-                  <div className="font-light mb-2 md:mb-0 text-start md:text-left flex items-start">
-                    {isAchievements && item.icon && (
-                      <span
-                        className="mr-2 text-dark text-base"
-                        style={{ marginTop: '0.25em' }}
-                      >
-                        {item.icon}
-                      </span>
-                    )}
-                    <span>{label}</span>
-                  </div>
+                  {aboutData[index].title?.toLowerCase() === 'experience' ? (
+                    <div className="mb-2">
+                      <div className="font-semibold text-dark text-sm sm:text-base">
+                        {item.company}{' '}
+                        <span className="text-dark/60">({item.year})</span>
+                      </div>
+                      <div className="font-light text-dark/90 text-xs sm:text-sm mb-1">
+                        {item.title}
+                      </div>
+                      {Array.isArray(item.details) &&
+                        item.details.length > 0 && (
+                          <ul className="list-disc ml-6 mt-1 text-dark/80 text-xs sm:text-sm space-y-1 text-left">
+                            {item.details.map((detail, i) => (
+                              <li key={i}>{detail}</li>
+                            ))}
+                          </ul>
+                        )}
+                    </div>
+                  ) : (
+                    <div className="font-light mb-2 md:mb-0 text-start md:text-left flex items-start">
+                      {isAchievements && item.icon && (
+                        <span
+                          className="mr-2 text-dark text-base"
+                          style={{ marginTop: '0.25em' }}
+                        >
+                          {item.icon}
+                        </span>
+                      )}
+                      <span>{label}</span>
+                    </div>
+                  )}
                   {(hasStage || hasIcons || hasSkills) && (
                     <div className="hidden md:flex">-</div>
                   )}

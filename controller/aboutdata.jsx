@@ -169,9 +169,33 @@ export const aboutData = [
   {
     title: 'experience',
     info: [
-      { title: 'UX/UI Designer - XYZ Company', stage: '2012 - 2023' },
-      { title: 'Web Developer - ABC Agency', stage: '2010 - 2012' },
-      { title: 'Intern - DEF Corporation', stage: '2008 - 2010' },
+      {
+        title: 'React/Next.JS Developer & Unity Developer',
+        company: 'Bell Immersive Technologies, Pune',
+        year: 'Nov 2022 - Present',
+        details: [
+          'Architected and built enterprise web apps using React.js, Next.js, and TypeScript.',
+          'Developed real-time and VR training solutions for international healthcare, finance, and energy sector clients.',
+          'Led UI/UX prototyping, implemented state management (Redux Toolkit), and advanced authentication flows.',
+        ],
+      },
+      {
+        title: 'Graphic Designer & Developer Intern',
+        company: 'Bell Immersive Technologies, Pune',
+        year: 'Aug 2022 - Nov 2022',
+        details: [
+          'Designed responsive, SEO-optimized websites for multiple clients.',
+          'Built interactive wireframes and contributed extensively to codebase modernization.',
+        ],
+      },
+      {
+        title: 'Web Designer & Developer Intern',
+        company: 'Organic-B, New Delhi',
+        year: 'Jan 2022 - Jul 2022',
+        details: [
+          'Developed static and interactive web pages, introducing modern UI/UX features.',
+        ],
+      },
     ],
   },
   {
